@@ -938,7 +938,7 @@ public class ImplEmailService implements IEmailUserService {
                 "      <td class=\"v-container-padding-padding\" style=\"overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:'Montserrat',sans-serif;\" align=\"left\">\n" +
                 "        \n" +
                 "  <div class=\"v-text-align\" style=\"color: #34495e; line-height: 140%; text-align: left; word-wrap: break-word;\">\n" +
-                "    <p style=\"font-size: 12px; line-height: 140%;\"><strong>http://localhost:8080/Salafni/verify/</strong></p>\n" +
+                "    <p style=\"font-size: 12px; line-height: 140%;\"><strong>http://localhost:8080/Salafni/verify/"+user.getVerificationToken()+"</strong></p>\n" +
                 "  </div>\n" +
                 "\n" +
                 "      </td>\n" +

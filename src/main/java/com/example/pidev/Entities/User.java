@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Set;
 
@@ -47,6 +47,7 @@ public class User implements Serializable  {
     private Integer IsVerified;
     private String verificationToken;
     private String verificationCode;
+    private Integer Age;
 
 
     @ManyToMany(fetch = FetchType.EAGER)

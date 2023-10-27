@@ -19,4 +19,8 @@ public class Transaction implements Serializable {
   private Long idTransaction;
   private Double totalPrice;
   private Date transactionDate;
+  @ManyToOne
+  private  Wallet walletBuyer;
+  @ManyToOne
+  private  Wallet walletSeller;
 }

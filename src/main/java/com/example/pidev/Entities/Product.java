@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -17,9 +18,11 @@ public class Product implements Serializable {
   @Column(name = "idProduct", length = 255)
   private Long idProduct;
   private String productName;
-  private String unitPrice;
+  private Double unitPrice;
   private String refProduct;
   @Enumerated(EnumType.STRING)
   private productCat Category;
+
+
 
 }
