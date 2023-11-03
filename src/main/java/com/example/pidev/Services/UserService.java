@@ -17,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
+import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
@@ -91,8 +92,8 @@ import java.util.Set;
     @Override
     public User registerUser(User user) {
         Wallet wallet=new Wallet();
-        wallet.setBalance((double) 0);
-        walletRepository.save(wallet);
+        wallet.setBalance((double) 300);
+
         Role role = roleRepository.findRoleByRoleName("Trader");
         Set<Role> userRoles = new HashSet<>();
         userRoles.add(role);
@@ -109,6 +110,8 @@ import java.util.Set;
 
         try {
             userRepository.save(user);
+//            wallet.setUser(user);
+            walletRepository.save(wallet);
             emailService.sendVerificationEmail(user);
         } catch (MessagingException e) {
             throw new RuntimeException(e);

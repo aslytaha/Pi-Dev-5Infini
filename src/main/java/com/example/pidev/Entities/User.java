@@ -58,10 +58,9 @@ public class User implements Serializable  {
 
     private Set<Role> Roles;
 
-    @OneToOne
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Wallet userWallet;
-
-
 
 
 

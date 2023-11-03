@@ -1,5 +1,6 @@
 package com.example.pidev.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,8 +20,12 @@ public class Transaction implements Serializable {
   private Long idTransaction;
   private Double totalPrice;
   private Date transactionDate;
+
   @ManyToOne
+  @JsonIgnore
   private  Wallet walletBuyer;
+
   @ManyToOne
+  @JsonIgnore
   private  Wallet walletSeller;
 }

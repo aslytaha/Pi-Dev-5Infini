@@ -1,5 +1,6 @@
 package com.example.pidev.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -20,10 +21,15 @@ public class Wallet implements Serializable {
   private Double Balance;
 
 
-  @OneToMany(cascade = CascadeType.ALL,mappedBy = "walletBuyer")
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "walletBuyer")
   private Set<Transaction> transactionsBuyer;
-  @OneToMany(cascade = CascadeType.ALL,mappedBy = "walletSeller")
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "walletSeller")
   private Set<Transaction> transactionsSeller;
 
+
+//  @OneToOne(mappedBy = "userWallet")
+//  @JsonIgnore
+//  private User user;
+////}
 
 }

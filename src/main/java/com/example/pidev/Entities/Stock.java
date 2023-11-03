@@ -1,6 +1,7 @@
 package com.example.pidev.Entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+//////l'achat ,tab des achats des users
 public class Stock implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +31,8 @@ public class Stock implements Serializable {
     private Currencies currencies;
 
     @OneToOne
-    private Wallet sellerWallet;
+    @JsonIgnore
+    private Wallet buyerWallet;
 
 
 
