@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a134f40-c72e-400a-8d54-43e77a4f39c3" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PN1z0ztMzfmpLVQemuHwlbd0HU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tahaa/Pi5infini/PIDEV/Pidev",
+    "spring.configuration.checksum": "b76cce2c3ae542c2b8e0b860fff2894b"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.pidev.Entities" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PidevApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Pidev" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.pidev.PidevApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a134f40-c72e-400a-8d54-43e77a4f39c3" name="Changes" comment="" />
+      <created>1683282984686</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683282984686</updated>
+      <workItem from="1683282986138" duration="1316000" />
+      <workItem from="1683322668841" duration="13000" />
+      <workItem from="1684346271331" duration="809000" />
+      <workItem from="1690396480102" duration="28000" />
+      <workItem from="1690396608936" duration="623000" />
+      <workItem from="1697066781240" duration="601000" />
+      <workItem from="1697113596461" duration="6950000" />
+      <workItem from="1697196402471" duration="285000" />
+      <workItem from="1697207491774" duration="5094000" />
+      <workItem from="1697453487311" duration="6085000" />
+      <workItem from="1697468076412" duration="600000" />
+      <workItem from="1697643704200" duration="596000" />
+      <workItem from="1697649677883" duration="189000" />
+      <workItem from="1697706748187" duration="1278000" />
+      <workItem from="1697901327804" duration="15645000" />
+      <workItem from="1698189398493" duration="7634000" />
+      <workItem from="1698239585448" duration="2853000" />
+      <workItem from="1698311428542" duration="1032000" />
+      <workItem from="1698419221579" duration="1348000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
