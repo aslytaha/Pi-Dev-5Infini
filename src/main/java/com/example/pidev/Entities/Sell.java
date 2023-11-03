@@ -1,5 +1,6 @@
 package com.example.pidev.Entities;
 
+
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,12 +12,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Wallet implements Serializable {
+public class Sell implements Serializable {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "idWallet", length = 255)
-  private Long idWallet;
-  private Double Balance;
-
+  @Column(name = "idSell", length = 255)
+  private Long idSell;
 
 }

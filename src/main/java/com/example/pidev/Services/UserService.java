@@ -3,12 +3,10 @@ package com.example.pidev.Services;
 import com.example.pidev.Entities.Role;
 import com.example.pidev.Entities.User;
 import com.example.pidev.Entities.UserCode;
-import com.example.pidev.Entities.Wallet;
 import com.example.pidev.Interfaces.IUserService;
 import com.example.pidev.Repositories.RoleRepository;
 import com.example.pidev.Repositories.UserCodeRepository;
 import com.example.pidev.Repositories.UserRepository;
-import com.example.pidev.Repositories.WalletRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +15,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.mail.MessagingException;
-import javax.transaction.Transactional;
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.ZoneId;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -50,8 +43,6 @@ import java.util.Set;
     @Autowired
     UserCodeRepository userCodeRepository;
 
-    @Autowired
-    WalletRepository walletRepository;
 
     @Override
     public List<User> retrieveAllUsers() {
@@ -91,32 +82,22 @@ import java.util.Set;
     ////////SIGN-UP/////////
     @Override
     public User registerUser(User user) {
-        Wallet wallet=new Wallet();
-        wallet.setBalance((double) 300);
-
-        Role role = roleRepository.findRoleByRoleName("Trader");
+//        ClientAccount clientAccount = new ClientAccount();
+//        clientAccountRepository.save(clientAccount);
+        Role role = roleRepository.findRoleByRoleName("User");
         Set<Role> userRoles = new HashSet<>();
         userRoles.add(role);
         user.setRoles(userRoles);
         user.setIsVerified(0);
         user.setPassword(getEncodedPassword(user.getPassword()));
-        user.setUserWallet(wallet);
-        Date dateNaissance = user.getBirthDate();
-        LocalDate localDateNaissance = dateNaissance.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        LocalDate dateSysteme = LocalDate.now();
-        int age = Period.between(localDateNaissance, dateSysteme).getYears();
-        user.setAge(age);
-
+//        user.setClientaccount(clientAccount);
 
         try {
-            userRepository.save(user);
-//            wallet.setUser(user);
-            walletRepository.save(wallet);
             emailService.sendVerificationEmail(user);
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
-        return user;
+        return userRepository.save(user);
     }
 
     @Override
@@ -151,7 +132,17 @@ import java.util.Set;
         userRepository.save(u);
     }
 
-
+    /// Reset Password feature /////
+//    public boolean EmailExists(String Email) {
+//        return userRepository.existsByEmail(Email);
+//    }
+// public User resetPassword(Long Phone) {
+//     User user = userRepository.findUserByPhone(Phone);
+//     if (user != null) {
+//
+//     }
+//     return null;
+// }
 
     public User ResetPasswordSms(String code, String newPassword, String confirmPassword) {
         User user = userRepository.findByVerificationCode(code);
@@ -174,6 +165,16 @@ import java.util.Set;
         return user;
 
 
+//    public User forgetPassword(String Email) {
+//
+//
+//        if (EmailExists(Email)) {
+//            User u = userRepository.findUserByEmail(Email);
+//
+//
+//        }
+//        return null;
+//    }
 
 
     }

@@ -11,12 +11,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Wallet implements Serializable {
+public class Purchase implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "idWallet", length = 255)
-  private Long idWallet;
-  private Double Balance;
-
-
+  @Column(name = "idPurchase", length = 255)
+  private Long idPurchase;
 }
